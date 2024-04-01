@@ -13,7 +13,6 @@ let URL = `https://api.weatherapi.com/v1/current.json?key=${key}&q=${props.city}
 
 axios.get(`${URL}`).then(function (response){
     setImgurl(response.data.current.condition.icon);
-    console.log(imgurl);
     setPrecipitation(`precipitation: ${Math.round(response.data.current.precip_mm)} mm`);
     setHumidity(`Humidity: ${response.data.current.humidity}%`);
     setTemperature(`Temperature in ${props.city} is ${Math.round(response.data.current.temp_c)}°C`);
@@ -22,7 +21,7 @@ axios.get(`${URL}`).then(function (response){
 return(<div><h1>{temperature}</h1>
 <p>{humidity}</p>
 <p>{precipitation}</p>
-<img src={imgurl}></img></div>)
+<img src={imgurl} alt="weather-logo"></img></div>)
 
 
 }
