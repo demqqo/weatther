@@ -21,7 +21,7 @@ axios.get(`${URL}`).then(function (response){
 return(<div><h1>{temperature}</h1>
 <p>{humidity}</p>
 <p>{precipitation}</p>
-<img src={imgurl} alt="weather-logo"></img></div>)
+<img src={imgurl} alt='weather-icon'></img></div>)
 
 
 }
