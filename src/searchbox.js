@@ -6,7 +6,7 @@ let [city, setCity] = useState(` `)
 let [city1, setCity1] = useState(` `)
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(`Temperature in ${city} is...`)
+        
         setCity1(city);
         
     }
